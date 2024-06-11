@@ -5,15 +5,112 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="22dp">
+
+    <EditText
+        android:id="@+id/txtautorDeTicket"
+        android:layout_width="154dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:hint="Autor de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <EditText
+        android:id="@+id/txtemailDeAutor"
+        android:layout_width="154dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:hint="Email de Autor"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <EditText
+        android:id="@+id/txtfechaDeCreacionDeTicket"
+        android:layout_width="164dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Fecha de creacion de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="178dp" />
+
+    <EditText
+        android:id="@+id/txtestadoDeTicket"
+        android:layout_width="157dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Estado de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="217dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <EditText
+        android:id="@+id/txtfechaDeFinalizacionDeTicket"
+        android:layout_width="155dp"
+        android:layout_height="47dp"
+        android:ems="10"
+        android:hint="ha de finalizacion de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <EditText
+        android:id="@+id/txtdescripcionDeTicket"
+        android:layout_width="153dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:hint="Descripcion de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="241dp" />
+
+    <EditText
+        android:id="@+id/txttituloDeTicket"
+        android:layout_width="159dp"
+        android:layout_height="43dp"
+        android:ems="10"
+        android:hint="Titulo del ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="176dp" />
+
+    <EditText
+        android:id="@+id/txtnumeroDeTicket"
+        android:layout_width="155dp"
+        android:layout_height="46dp"
+        android:ems="10"
+        android:hint="Numero de ticket"
+        android:inputType="text"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="106dp" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="HELPDESK"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="37dp" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="369dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTicket"
+        android:layout_width="409dp"
+        android:layout_height="299dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="431dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

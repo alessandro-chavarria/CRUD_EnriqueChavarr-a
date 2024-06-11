@@ -15,3 +15,5 @@ fechaDeCreacionDeTicket varchar2(10),
 estadoDeTicket varchar2(10),
 fechaDeFinalizacionDeTicket varchar2(10)
 );
+
+SELECT * FROM TB_Ticket
