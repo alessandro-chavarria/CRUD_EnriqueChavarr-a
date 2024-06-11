@@ -1,17 +1,24 @@
 package enrique.chavarria.crud_enriquechavarra
 
+import RecyclerViewHelper.Adaptador
 import android.os.Bundle
+import android.widget.Adapter
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import modelo.ClaseConexion
+import modelo.Tickets
 import java.util.UUID
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Llamar a todos los elemtos de la vista +
+
         val txttituloDeTicket = findViewById<TextView>(R.id.txttituloDeTicket)
         val txtdescripcionDeTicket = findViewById<TextView>(R.id.txtdescripcionDeTicket)
         val txtautorDeTicket = findViewById<TextView>(R.id.txtautorDeTicket)
@@ -32,6 +39,42 @@ class MainActivity : AppCompatActivity() {
         val txtestadoDeTicket = findViewById<TextView>(R.id.txtestadoDeTicket)
         val txtfechaDeFinalizacionDeTicket = findViewById<TextView>(R.id.txtfechaDeFinalizacionDeTicket)
         val btnGuardar = findViewById<Button>(R.id.btnGuardar)
+        val rcvTickets = findViewById<RecyclerView>(R.id.rcvTicket)
+
+        rcvTickets.layoutManager = LinearLayoutManager(this)
+
+        fun obtenerTickets(): List<Tickets> {
+            val objCon = ClaseConexion().cadenaConexion()
+            val statement = objCon?.createStatement()
+            val resulSet = statement?.executeQuery("SELECT * FROM TB_Ticket")!!
+
+            val listTickets = mutableListOf<Tickets>()
+
+            while (resulSet.next()) {
+                val uuid = resulSet.getString("UUID")
+                val titulo = resulSet.getString("tituloDeTicket")
+                val descripcion = resulSet.getString("descripcionDeTicket")
+                val autor = resulSet.getString("autorDeTicket")
+                val email = resulSet.getString("emailDeAutor")
+                val creacion = resulSet.getString("fechaDeCreacionDeTicket")
+                val estado = resulSet.getString("estadoDeTicket")
+                val finalizacion = resulSet.getString("fechaDeFinalizacionDeTicket")
+
+                val values = Tickets(uuid, titulo, descripcion, autor, email, creacion, estado, finalizacion)
+                listTickets.add(values)
+            }
+
+            return listTickets
+        }
+
+        CoroutineScope(Dispatchers.IO).launch {
+            val tickets = obtenerTickets()
+            withContext(Dispatchers.Main)
+            {
+                val adp = Adaptador(tickets)
+                rcvTickets.adapter = adp
+            }
+        }
 
         //Programar el boton de guardar
         btnGuardar.setOnClickListener {
