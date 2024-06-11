@@ -23,8 +23,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-        //Llamar a todos los elemtos de la vista
-        val txtnumeroDeTicket = findViewById<TextView>(R.id.txtnumeroDeTicket)
+        //Llamar a todos los elemtos de la vista +
         val txttituloDeTicket = findViewById<TextView>(R.id.txttituloDeTicket)
         val txtdescripcionDeTicket = findViewById<TextView>(R.id.txtdescripcionDeTicket)
         val txtautorDeTicket = findViewById<TextView>(R.id.txtautorDeTicket)
@@ -42,16 +41,15 @@ class MainActivity : AppCompatActivity() {
                 val objConexion = ClaseConexion().cadenaConexion()
 
                 //Crear una variable que contenga un PrepareStatement
-                val addTicket = objConexion?.prepareStatement("insert into TB_Ticket (UUID, numeroDeTicket, tituloDeTicket, descripcionDeTicket, autorDeTicket, emailDeAutor, fechaDeCreacionDeTicket, estadoDeTicket, fechaDeFinalizacionDeTicket) values(?, ?, ?, ?, ?, ?, ?, ?, ?)")!!
+                val addTicket = objConexion?.prepareStatement("insert into TB_Ticket (UUID, tituloDeTicket, descripcionDeTicket, autorDeTicket, emailDeAutor, fechaDeCreacionDeTicket, estadoDeTicket, fechaDeFinalizacionDeTicket) values(?, ?, ?, ?, ?, ?, ?, ?)")!!
                 addTicket.setString(1, UUID.randomUUID().toString())
-                addTicket.setInt(2,txtnumeroDeTicket.text.toString().toInt())
-                addTicket.setString(3, txttituloDeTicket.text.toString())
-                addTicket.setString(4, txtdescripcionDeTicket.text.toString())
-                addTicket.setString(5, txtautorDeTicket.text.toString())
-                addTicket.setString(6, txtemailDeAutor.text.toString())
-                addTicket.setString(7, txtfechaDeCreacionDeTicket.text.toString())
-                addTicket.setString(8, txtestadoDeTicket.text.toString())
-                addTicket.setString(9, txtfechaDeFinalizacionDeTicket.text.toString())
+                addTicket.setString(2, txttituloDeTicket.text.toString())
+                addTicket.setString(3, txtdescripcionDeTicket.text.toString())
+                addTicket.setString(4, txtautorDeTicket.text.toString())
+                addTicket.setString(5, txtemailDeAutor.text.toString())
+                addTicket.setString(6, txtfechaDeCreacionDeTicket.text.toString())
+                addTicket.setString(7, txtestadoDeTicket.text.toString())
+                addTicket.setString(8, txtfechaDeFinalizacionDeTicket.text.toString())
                 addTicket.executeUpdate()
             }
         }

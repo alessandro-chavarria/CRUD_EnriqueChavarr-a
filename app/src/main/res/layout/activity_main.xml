@@ -26,8 +26,8 @@
         android:ems="10"
         android:hint="Email de Autor"
         android:inputType="text"
-        tools:layout_editor_absoluteX="217dp"
-        tools:layout_editor_absoluteY="102dp" />
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="171dp" />
 
     <EditText
         android:id="@+id/txtfechaDeCreacionDeTicket"
@@ -76,18 +76,8 @@
         android:ems="10"
         android:hint="Titulo del ticket"
         android:inputType="text"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="176dp" />
-
-    <EditText
-        android:id="@+id/txtnumeroDeTicket"
-        android:layout_width="155dp"
-        android:layout_height="46dp"
-        android:ems="10"
-        android:hint="Numero de ticket"
-        android:inputType="text"
-        tools:layout_editor_absoluteX="40dp"
-        tools:layout_editor_absoluteY="106dp" />
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="107dp" />
 
     <TextView
         android:id="@+id/textView"
