@@ -49,7 +49,7 @@ class Adaptador(private var Datos: List<Tickets>) : RecyclerView.Adapter<ViewHol
 
         GlobalScope.launch(Dispatchers.IO){
             //1- Creamos un objeto de la clase conexion
-            val objConexion = ClaseConexion().cadenaConexion()
+            val objConexion = ClaseConexion().Conexion()
 
             //2- Crear una variable que contenga un PrepareStatement
             val deleteTicket = objConexion?.prepareStatement("delete from TB_Ticket where tituloDeTicket = ?")!!
@@ -70,7 +70,7 @@ class Adaptador(private var Datos: List<Tickets>) : RecyclerView.Adapter<ViewHol
         GlobalScope.launch(Dispatchers.IO){
 
             //1- Creo un objeto de la clase de conexion
-            val objConexion = ClaseConexion().cadenaConexion()
+            val objConexion = ClaseConexion().Conexion()
 
             //2- creo una variable que contenga un PrepareStatement
             val addTicket = objConexion?.prepareStatement("UPDATE tb_ticket SET tituloDeticket = ?, descripcionDeTicket = ?, autorDeTicket = ?, emailDeAutor = ?, estadoDeTicket = ?, fechaDeFinalizacionDeTicket = ? WHERE UUID = ?")!!
@@ -114,7 +114,7 @@ class Adaptador(private var Datos: List<Tickets>) : RecyclerView.Adapter<ViewHol
 
             val builder = AlertDialog.Builder(context)
             builder.setTitle("Eliminar")
-            builder.setMessage("¿Desea eliminar la mascota?")
+            builder.setMessage("¿Desea eliminar el ticket?")
 
             //Botones
             builder.setPositiveButton("Si") { dialog, which ->
@@ -130,7 +130,7 @@ class Adaptador(private var Datos: List<Tickets>) : RecyclerView.Adapter<ViewHol
 
         }
 
-        //Todo: icono de editar
+
         holder.imgEditar.setOnClickListener{
             val context = holder.itemView.context
 

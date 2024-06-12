@@ -22,7 +22,7 @@
             android:layout_height="0dp"
             android:layout_marginStart="25dp"
             android:layout_marginEnd="23dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="9dp"
             android:text="Text"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/imgEditar"
@@ -55,10 +55,26 @@
             app:layout_constraintBottom_toTopOf="@+id/lbautorDeTicket"
             app:layout_constraintEnd_toStartOf="@+id/lbestadoDeTicket"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbtituloDeTicket" />
+            app:layout_constraintTop_toBottomOf="@+id/lbemailDeAutor" />
 
         <TextView
             android:id="@+id/lbtituloDeTicket"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="38dp"
+            android:layout_marginBottom="21dp"
+            android:text="Text"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/lbemailDeAutor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/lbemailDeAutor"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="25dp"
@@ -69,49 +85,21 @@
             app:layout_constraintBottom_toTopOf="@+id/lbdescripcionDeTicket"
             app:layout_constraintEnd_toStartOf="@+id/lbfechaDeCreacionDeTicket"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/lbuuid" />
-
-        <TextView
-            android:id="@+id/lbuuid"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="23dp"
-            android:layout_marginBottom="18dp"
-            android:text="Text"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/lbtituloDeTicket"
-            app:layout_constraintEnd_toStartOf="@+id/lbemailDeAutor"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/lbemailDeAutor"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="19dp"
-            android:layout_marginEnd="28dp"
-            android:layout_marginBottom="18dp"
-            android:text="Text"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/lbfechaDeCreacionDeTicket"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbuuid"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/lbtituloDeTicket" />
 
         <TextView
             android:id="@+id/lbfechaDeCreacionDeTicket"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:layout_marginTop="69dp"
             android:layout_marginEnd="28dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginBottom="15dp"
             android:text="Text"
             android:textSize="18sp"
             app:layout_constraintBottom_toTopOf="@+id/lbestadoDeTicket"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/lbtituloDeTicket"
-            app:layout_constraintTop_toBottomOf="@+id/lbemailDeAutor" />
+            app:layout_constraintStart_toEndOf="@+id/lbemailDeAutor"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/lbfechaDeFinalizacionDeTicket"
@@ -128,8 +116,8 @@
 
         <ImageButton
             android:id="@+id/imgEliminar"
-            android:layout_width="54dp"
-            android:layout_height="34dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginEnd="75dp"
             android:layout_marginBottom="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -140,8 +128,8 @@
 
         <ImageButton
             android:id="@+id/imgEditar"
-            android:layout_width="54dp"
-            android:layout_height="36dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:layout_marginStart="63dp"
             android:layout_marginEnd="116dp"
             android:layout_marginBottom="2dp"

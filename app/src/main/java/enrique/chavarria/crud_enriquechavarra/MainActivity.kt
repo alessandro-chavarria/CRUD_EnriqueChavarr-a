@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         rcvTickets.layoutManager = LinearLayoutManager(this)
 
         fun obtenerTickets(): List<Tickets> {
-            val objCon = ClaseConexion().cadenaConexion()
+            val objCon = ClaseConexion().Conexion()
             val statement = objCon?.createStatement()
             val resulSet = statement?.executeQuery("SELECT * FROM TB_Ticket")!!
 
@@ -81,7 +81,7 @@ class MainActivity : AppCompatActivity() {
             CoroutineScope(Dispatchers.IO).launch {
 
                 //Crear objeto de la clase conexion
-                val objConexion = ClaseConexion().cadenaConexion()
+                val objConexion = ClaseConexion().Conexion()
 
                 //Crear una variable que contenga un PrepareStatement
                 val addTicket = objConexion?.prepareStatement("insert into TB_Ticket (UUID, tituloDeTicket, descripcionDeTicket, autorDeTicket, emailDeAutor, fechaDeCreacionDeTicket, estadoDeTicket, fechaDeFinalizacionDeTicket) values(?, ?, ?, ?, ?, ?, ?, ?)")!!
@@ -94,7 +94,11 @@ class MainActivity : AppCompatActivity() {
                 addTicket.setString(7, txtestadoDeTicket.text.toString())
                 addTicket.setString(8, txtfechaDeFinalizacionDeTicket.text.toString())
                 addTicket.executeUpdate()
-            }
+
+                val nuevosTicket = obtenerTickets()
+                withContext(Dispatchers.Main){
+                    (rcvTickets.adapter as? Adaptador)?.actualizarLista(nuevosTicket)
+            }   }
         }
     }
 }

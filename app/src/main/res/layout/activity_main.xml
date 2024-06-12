@@ -13,136 +13,133 @@
         android:id="@+id/btnGuardar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="116dp"
         android:text="Guardar"
-        app:layout_constraintStart_toStartOf="@+id/txtautorDeTicket"
-        app:layout_constraintTop_toBottomOf="@+id/txtfechaDeFinalizacionDeTicket" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.535"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.512" />
 
     <EditText
         android:id="@+id/txtfechaDeFinalizacionDeTicket"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="43dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="155dp"
+        android:layout_height="43dp"
         android:ems="10"
         android:hint="ha de finalizacion de ticket"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtautorDeTicket"
-        app:layout_constraintTop_toBottomOf="@+id/txtestadoDeTicket" />
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtestadoDeTicket"
+        app:layout_constraintVertical_bias="0.03" />
 
     <EditText
         android:id="@+id/txtautorDeTicket"
-        android:layout_width="0dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="58dp"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Autor de ticket"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGuardar"
-        app:layout_constraintEnd_toStartOf="@+id/txtfechaDeFinalizacionDeTicket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtdescripcionDeTicket"
-        app:layout_constraintVertical_bias="0.541" />
+        app:layout_constraintTop_toBottomOf="@+id/txtdescripcionDeTicket"
+        app:layout_constraintVertical_bias="0.03" />
 
     <EditText
         android:id="@+id/txtdescripcionDeTicket"
-        android:layout_width="0dp"
+        android:layout_width="155dp"
         android:layout_height="45dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginEnd="25dp"
         android:ems="10"
         android:hint="Descripcion de ticket"
         android:inputType="text"
-        app:layout_constraintBaseline_toBaselineOf="@+id/txtestadoDeTicket"
-        app:layout_constraintEnd_toStartOf="@+id/txtestadoDeTicket"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.152"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtemailDeAutor"
+        app:layout_constraintVertical_bias="0.024" />
 
     <EditText
         android:id="@+id/txtestadoDeTicket"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="19dp"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Estado de ticket"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtfechaDeFinalizacionDeTicket"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtdescripcionDeTicket"
-        app:layout_constraintTop_toBottomOf="@+id/txtfechaDeCreacionDeTicket" />
+        app:layout_constraintHorizontal_bias="0.886"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtfechaDeCreacionDeTicket"
+        app:layout_constraintVertical_bias="0.017" />
 
     <EditText
         android:id="@+id/txtfechaDeCreacionDeTicket"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="159dp"
+        android:layout_height="49dp"
         android:ems="10"
         android:hint="Fecha de creacion de ticket"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtestadoDeTicket"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txtemailDeAutor"
-        app:layout_constraintTop_toBottomOf="@+id/txttituloDeTicket" />
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
     <EditText
         android:id="@+id/txtemailDeAutor"
-        android:layout_width="0dp"
+        android:layout_width="159dp"
         android:layout_height="50dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="65dp"
         android:ems="10"
         android:hint="Email de Autor"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="@+id/txtdescripcionDeTicket"
-        app:layout_constraintEnd_toStartOf="@+id/txtfechaDeCreacionDeTicket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.138"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txttituloDeTicket"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
     <EditText
         android:id="@+id/txttituloDeTicket"
         android:layout_width="159dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="28dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Titulo del ticket"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/txtfechaDeCreacionDeTicket"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.032" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
-        android:layout_marginBottom="25dp"
         android:text="HELPDESK"
         android:textSize="34sp"
-        app:layout_constraintBottom_toTopOf="@+id/txttituloDeTicket"
+        app:layout_constraintBottom_toBottomOf="@+id/rcvTicket"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintHorizontal_bias="0.518"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcvTicket"
-        android:layout_width="411dp"
-        android:layout_height="341dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="412dp"
+        android:layout_height="322dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
